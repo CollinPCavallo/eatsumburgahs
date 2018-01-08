@@ -1,0 +1,1 @@
+INSERT INTO burgers(burger_name) VALUES("A1 Thick 'n Hearty"),("1/2lb Burger"), ('Fried Egg Burger');

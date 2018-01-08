@@ -1,0 +1,32 @@
+<div class="jumbotron text-center">
+    <div class="container">
+        <h1>Whats on the menu?</h1>
+        <form id="addBurger">
+            <input type="text" name="burger">
+            <button type="submit">Fresh Burger!</button>
+        </form>
+    </div>
+</div>
+
+<div class="col-md-6 text-center not-eaten">
+    <h3>Burgers:</h3>
+    {{#each notEaten}}
+
+    <div class="row">
+        <h4>{{this.burger_name}}
+            <button data-putburgerid="{{this.id}}" class="updateBurg">Put burger To mouth</button>
+        </h4>
+    </div>
+
+    {{/each}}
+</div>
+<div class="col-md-6 text-center eaten">
+    <h3>Burgers Devoured:</h3>
+    {{#each eaten}}
+
+    <div class="row">
+        <h4>{{this.burger_name}}</h4>
+    </div>
+
+    {{/each}}
+</div>
