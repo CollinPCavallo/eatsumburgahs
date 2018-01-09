@@ -1,8 +1,8 @@
 const mysql = require('mysql');
 const connection;
 
-if (process.env.JAWS_URL) {
-    connection = mysql.createConnection(proccess.env.JAWS_URL);
+if (process.env.JAWSDB_URL) {
+    connection = mysql.createConnection(proccess.env.JAWSDB_URL);
 } else {
     const connection = mysql.createConnection({
         port: 3306,
