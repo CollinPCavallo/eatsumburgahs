@@ -9,14 +9,14 @@ $(document).ready(function () {
         $.ajax({
             type: 'POST',
             url: "/burgers",
-            data: burgers
+            data: burger
         }).then(
-            function () {location.reload}
+            function () {location.reload()}
         );
     })
 
     $('#eatBurger').on('click', function () {
-        var id = $(this).data('burgerID')
+        var id = $(this).data('burgerid')
 
         $.ajax( {
             type: 'PUT',
@@ -25,7 +25,7 @@ $(document).ready(function () {
                 devoured: true
             }
         }).then(
-            function () {location.reload}
+            function () {location.reload()}
         )
     })
 })

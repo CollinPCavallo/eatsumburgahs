@@ -12,7 +12,7 @@ const orm = {
     },
     add: (table, colName, value, callback) => {
         // var queryString = `INSERT INTO ${table} (${colName}) VALUES (${value})`;
-        var queryString = "INSERT INTO " + table + "(" + colName + ') VALUES ("' + value + '");';
+        var queryString = "INSERT INTO " + table + " (" + colName + ') VALUES ("' + value + '");';
         connection.query(queryString, (err,result) => {
             if (err) {
                 throw err

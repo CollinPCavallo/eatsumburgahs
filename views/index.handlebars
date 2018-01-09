@@ -1,18 +1,20 @@
+<div>
 <h1 class="text-center">Burgers!
     <img class="irc_mi" src="https://78.media.tumblr.com/398627dbdbb5067d2b72bd75a3b669b2/tumblr_n0lhupKk9c1s016wao1_400.png"
         alt="Image result for krabby patty no background" onload="typeof google==='object'&amp;&amp;google.aft&amp;&amp;google.aft(this)"
         width="200" height="159">
 </h1>
+</div>
 <div class="container">
     <div class="row">
         <div class="text-center col s6">
             <h1>Fresh Made</h1>
             {{!-- iterate over the burgers and if devoured is false show here --}} {{#each burgers}} {{#unless this.devoured}}
             <div class="fresh">
-                <form>
-                    {{this.burger_name}}
-                    <button type="submit" id="eatBurger" class='button button-raised button-pill button-inverse'>Devour!</button>
-                </form>
+                
+                    <h4>{{this.burger_name}}</h4>
+                    <button data-burgerID={{this.id}} type="submit" id="eatBurger" class='button button-raised button-pill button-inverse'>Devour!</button>
+                
             </div>
             {{/unless}} {{/each}}
         </div>
@@ -21,7 +23,7 @@
             {{!-- iterate over the burgers and if devoured is true show here --}} {{#each burgers}} {{#if this.devoured}}
             <div class='devoured'>
                 <div>
-                    {{this.burger_name}}
+                    <h4>{{this.burger_name}}</h4>
                 </div>
             </div>
             {{/if}} {{/each}}
@@ -34,9 +36,9 @@
 
 <div class="add">
     <div class="col s12">
-        <form class='text-center'>
-            <input type="text" id="addBurger" name="burger_name" placeholder="Order A Burger...">
-            <button type="submit" class="button button-raised button-royal">Order Burger</button>
+        <form class='text-center' id="addBurger">
+            <input type="text" id="newBurgerForm" name="burger" placeholder="Order A Burger...">
+            <button type="submit" class="button">Order Burger</button>
         </form>
     </div>
 </div>
